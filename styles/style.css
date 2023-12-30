@@ -249,7 +249,25 @@ p {
   margin-top: -1.5em;
 }
 
+.divider {
+  content: url("../images/divider.png");
+  display: block;
+  margin: auto;
+  padding: 1em;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+}
+
 @media screen and (min-width: 1000px) {
+  #titlediv {
+    padding-bottom: 4em !important;
+  }
+
+  .full {
+    margin-bottom: -4em;
+  }
+
   .titleimg {
     content: url("../images/desktop.gif");
     margin-bottom: 3em;
