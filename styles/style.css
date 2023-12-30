@@ -1,0 +1,321 @@
+/* Additional Default Styles for Responsive */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+object,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #000;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+/* Global Styles */
+
+@font-face {
+  font-family: EddieScript;
+  src: url(./Eddietype.otf);
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: EddieScript, sans-serif;
+  background-image: url("../images/background.jpg");
+  background-repeat: repeat;
+  background-size: contain;
+  font-size: 2.8em;
+  letter-spacing: -2;
+  max-width: 1400px;
+  display: block;
+  margin: auto;
+}
+
+.titleimg {
+  content: url("../images/mobile.gif");
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.storyimg {
+  content: url("../images/story.gif");
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.heroimg {
+  content: url("../images/hero.gif");
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.villainimg {
+  content: url("../images/villain.gif");
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+p {
+  margin: 1em;
+  line-height: 0.8;
+}
+
+.storyp {
+  margin-top: -1.5em;
+}
+
+@media screen and (min-width: 1000px) {
+  .titleimg {
+    content: url("../images/desktop.gif");
+    margin-bottom: 3em;
+  }
+
+  .imageleft {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .imageright {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+  }
+
+  .imageright > p {
+    direction: ltr;
+  }
+
+  .heroimg {
+    margin-right: 1em;
+    margin-left: -1em;
+  }
+
+  .storyimg {
+    margin-top: -3em;
+  }
+
+  .villainimg {
+    margin-left: 0.6em;
+  }
+
+  body {
+    font-size: 5em;
+    letter-spacing: -4;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  body {
+    font-size: 3.5em;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  body {
+    font-size: 3.9em;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  body {
+    font-size: 4.5em;
+    letter-spacing: -3;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 4.8em;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  body {
+    font-size: 5.2em;
+  }
+}
