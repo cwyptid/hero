@@ -196,6 +196,10 @@ img {
   max-width: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: EddieScript, sans-serif;
   background-image: url("../images/background.jpg");
@@ -206,6 +210,7 @@ body {
   max-width: 1400px;
   display: block;
   margin: auto;
+  overflow-x: hidden;
 }
 
 .titleimg {
@@ -214,6 +219,7 @@ body {
   height: auto;
   display: block;
   margin: auto;
+  animation: fadeInUp 1s ease-out 0.2s both;
 }
 
 .storyimg {
@@ -243,6 +249,7 @@ body {
 p {
   margin: 1em;
   line-height: 0.8;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
 }
 
 .storyp {
@@ -257,6 +264,15 @@ p {
   width: 100%;
   height: auto;
   max-width: 800px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.divider:hover {
+  transform: scaleY(1.05);
+}
+
+section {
+  transition: all 0.4s ease;
 }
 
 @media screen and (min-width: 1000px) {
@@ -336,4 +352,75 @@ p {
   body {
     font-size: 5.2em;
   }
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Initial fade-in for hero section */
+.full {
+  animation: fadeInUp 1.2s ease-out;
+}
+
+/* Progress indicator line */
+.progress-line {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 3px;
+  background: #418379;
+  transform: scaleY(0);
+  transform-origin: top;
+  z-index: 999;
+}
+
+/* Back to top section */
+.back-to-top-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 1em;
+  text-align: center;
+}
+
+.back-to-top-text {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #418379;
+}
+
+.back-to-top-text:hover {
+  color: #a0284c;
 }
